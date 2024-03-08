@@ -4,7 +4,6 @@ import nilloader.api.lib.mini.MiniTransformer;
 import nilloader.api.lib.mini.PatchContext;
 import nilloader.api.lib.mini.annotation.Patch;
 
-// Required for Forge compatibility
 @Patch.Class("org.lwjgl.opengl.MouseEventQueue")
 public class MouseEventQueueTransformer extends MiniTransformer {
 	@Patch.Method("handleButton(Ljava/awt/event/MouseEvent;)V")
