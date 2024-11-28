@@ -19,4 +19,15 @@ public class MouseEventQueueTransformer extends MiniTransformer {
 				PUTFIELD("org/lwjgl/opengl/MouseEventQueue", "saved_control_state", "Z")
 		);
 	}
+
+	@Patch.Method("mouseWheelMoved(Ljava/awt/event/MouseWheelEvent;)V")
+	public void patchMouseWheelMoved(PatchContext ctx) {
+		ctx.search(
+				INVOKEVIRTUAL("java/awt/event/MouseWheelEvent", "getWheelRotation", "()I")
+		).jumpAfter();
+
+		ctx.add(
+				INVOKESTATIC("java/lang/Integer", "signum", "(I)I")
+		);
+	}
 }
