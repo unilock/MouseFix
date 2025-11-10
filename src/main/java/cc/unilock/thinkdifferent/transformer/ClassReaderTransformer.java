@@ -1,4 +1,4 @@
-package cc.unilock.mousefix.transformer;
+package cc.unilock.thinkdifferent.transformer;
 
 import nilloader.api.lib.mini.MiniTransformer;
 import nilloader.api.lib.mini.PatchContext;

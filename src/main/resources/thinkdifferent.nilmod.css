@@ -1,10 +1,10 @@
 @nilmod {
-	name: "MouseFix";
+	name: "ThinkDifferent";
 	description: "NilLoader mod to fix left-clicking while holding CTRL on macOS";
 	authors: "unilock";
 	version: "${version}";
 }
 
 entrypoints {
-	premain: "cc.unilock.mousefix.MouseFixPremain";
+	premain: "cc.unilock.thinkdifferent.ThinkDifferentPremain";
 }
